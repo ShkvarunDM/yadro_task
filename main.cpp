@@ -9,7 +9,7 @@ struct ComputerClub
 {
     void start()
     {
-        fin.open("input.txt");
+        fin.open("input2.txt");
 
         if (!fin.is_open()){
             std::cout << "Can't open file";
@@ -115,7 +115,7 @@ private:
      }
 
      bool checkBusyTable (const unsigned int num){
-         vector<Table>::iterator pr;
+         std::vector<Table>::iterator pr;
          for (pr = tables.begin(); pr!= tables.end(); pr++){
              if (pr->number == num)
                 return false;
@@ -345,7 +345,7 @@ private:
     unsigned int numberTable = 0;
     unsigned int countTables = 0;
     unsigned int money = 0;
-    std::vector <string> clients;
+    std::vector <std::string> clients;
 
     struct Table
     {
@@ -360,8 +360,8 @@ private:
         unsigned int totalMinutes = 0;
         unsigned int revenue = 0;
     };
-    vector <workTable> workTables;
-    vector <Table> tables;
+    std::vector <workTable> workTables;
+    std::vector <Table> tables;
 
 };
 
